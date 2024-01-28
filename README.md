@@ -1,7 +1,13 @@
 # DotnetAngularWebProject
 A template of a web project using a .NET, Angular, and SQLite tech stack that is deployed to Azure App Services using Docker and CircleCI.
 
-This is just an example project that contains a frontend, backend, database, and CI/CD (called a walking skeleton). It is fully functional. The purpose is for anyone to have a starting point that can be up and running quickly to save time when starting a new project.
+This is just an example project that contains the following:
+- A frontend
+- A backend
+- A database
+- A CI/CD pipeline
+
+It is fully functional. The purpose is for anyone to have a starting point that can be used to get up and running quickly and save time when starting a new project.
 
 ## Technologies Used
 ### .NET
