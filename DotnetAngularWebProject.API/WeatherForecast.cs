@@ -1,6 +1,6 @@
 using System;
 
-namespace WeatherForecast
+namespace DotnetAngularWebProject.API
 {
     public class WeatherForecast
     {

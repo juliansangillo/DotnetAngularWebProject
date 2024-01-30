@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace WeatherForecast
+namespace DotnetAngularWebProject.API
 {
     public class Program
     {
