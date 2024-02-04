@@ -1,8 +1,8 @@
 using System;
 
-namespace DotnetAngularWebProject.API
+namespace DotnetAngularWebProject.WeatherForecast
 {
-    public class WeatherForecast
+    public class Entity
     {
         public DateTime Date { get; set; }
 
