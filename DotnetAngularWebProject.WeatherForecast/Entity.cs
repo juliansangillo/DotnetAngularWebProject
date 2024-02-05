@@ -1,9 +1,7 @@
 using System;
 
-namespace DotnetAngularWebProject.WeatherForecast
-{
-    public class Entity
-    {
+namespace DotnetAngularWebProject.WeatherForecast {
+    public class Entity {
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }
