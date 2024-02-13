@@ -4,7 +4,15 @@
     <TargetFramework>net5.0</TargetFramework>
     <UserSecretsId>a361541c-1587-43d7-9512-a24bfe40dce8</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.17">
+	  <PrivateAssets>all</PrivateAssets>
+	  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.6" />
@@ -12,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DotnetAngularWebProject.Common\DotnetAngularWebProject.Common.csproj" />
     <ProjectReference Include="..\DotnetAngularWebProject.WeatherForecast\DotnetAngularWebProject.WeatherForecast.csproj" />
   </ItemGroup>
 
