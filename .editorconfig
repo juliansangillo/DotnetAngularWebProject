@@ -427,5 +427,6 @@ dotnet_diagnostic.CA2250.severity = warning
 dotnet_diagnostic.CA2251.severity = warning
 dotnet_diagnostic.CA2253.severity = warning
 dotnet_diagnostic.CA2254.severity = warning
+insert_final_newline = true
 [*.vb]
 dotnet_diagnostic.CA1047.severity = warning

@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotnetAngularWebProject.WeatherForecast.Data.Migrations
 {
     [DbContext(typeof(ModuleDbContext))]
-    [Migration("20240210193742_InitialCreate")]
+    [Migration("20240217195341_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

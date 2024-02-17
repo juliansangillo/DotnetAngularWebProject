@@ -16,8 +16,10 @@ namespace DotnetAngularWebProject.API.Modules {
                 .EnumerateFiles(IStartup.AssemblyPath, $"{Program.Name}.*.dll")
                 .Select(x => Assembly.LoadFrom(x))
                 .SelectMany(x => x.GetTypes())
-                .Where(x => !x.IsInterface && !x.IsAbstract)
-                .Where(x => x.GetInterfaces().Contains(typeof(IStartup)))
+                .Where(x
+                    => !x.IsInterface
+                        && !x.IsAbstract
+                        && x.GetInterfaces().Contains(typeof(IStartup)))
                 .Select(x => @this.AddModule(x))
                 .ToList();
 

@@ -1,17 +1,15 @@
 ﻿using DotnetAngularWebProject.Common;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace DotnetAngularWebProject.WeatherForecast.Data {
-    internal static class Extensions {
+namespace DotnetAngularWebProject.WeatherForecast.Data.Seeders {
+    internal sealed class ModelSeeder : IEntitySeeder<ModuleDbContext> {
         private static readonly string[] Summaries = new[] {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        public static IServiceScope SeedDatabase(this IServiceScope scope) {
-            ModuleDbContext context = scope.ServiceProvider.GetRequiredService<ModuleDbContext>();
+        public void Seed(ModuleDbContext context) {
             Random rng = new();
 
             _ = Enumerable
@@ -27,18 +25,6 @@ namespace DotnetAngularWebProject.WeatherForecast.Data {
                 });
 
             _ = context.SaveChanges();
-
-            return scope;
-        }
-
-        public static IServiceScope MigrateDatabase(this IServiceScope scope) {
-            scope
-                .ServiceProvider
-                .GetRequiredService<ModuleDbContext>()
-                .Database
-                .Migrate();
-
-            return scope;
         }
     }
 }

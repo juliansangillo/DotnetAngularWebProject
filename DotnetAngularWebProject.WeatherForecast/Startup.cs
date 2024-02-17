@@ -14,13 +14,8 @@ namespace DotnetAngularWebProject.WeatherForecast {
         public void ConfigureServices(IServiceCollection services) => services.AddDbContext<ModuleDbContext>();
 
         public void Configure(IApplicationBuilder app, Microsoft.AspNetCore.Hosting.IWebHostEnvironment env) {
-            if (env.IsDevelopment()) {
-                using IServiceScope scope = app.ApplicationServices.CreateScope();
-
-                _ = scope
-                    .MigrateDatabase()
-                    .SeedDatabase();
-            }
+            if (env.IsDevelopment())
+                _ = app.MigrateAndSeedDatabase<ModuleDbContext>(GetType().Assembly);
         }
     }
 }
