@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 using System.Linq;
 
 namespace DotnetAngularWebProject.WeatherForecast {
-    public sealed class Startup : IStartup {
+    internal sealed class Startup : IStartup {
         public static readonly string Module = typeof(Startup).Namespace!.Split('.').Last();
 
         public string ModuleName => Module;
