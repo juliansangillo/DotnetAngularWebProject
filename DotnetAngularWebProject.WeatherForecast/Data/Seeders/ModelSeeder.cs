@@ -9,14 +9,14 @@ namespace DotnetAngularWebProject.WeatherForecast.Data.Seeders {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
 
-        public void Seed(ModuleDbContext context) {
+        public void Seed(ModuleDbContext db) {
             Random rng = new();
 
             _ = Enumerable
                 .Range(0, 5)
                 .ForEach(index => {
-                    if (context.WeatherForecasts.None(x => x.Id == index))
-                        _ = context.WeatherForecasts.Add(
+                    if (db.WeatherForecasts.None(x => x.Id == index))
+                        _ = db.WeatherForecasts.Add(
                             new Domain.Model(
                                 id: index,
                                 date: DateTime.Now.AddDays(index),
@@ -24,7 +24,7 @@ namespace DotnetAngularWebProject.WeatherForecast.Data.Seeders {
                                 summary: Summaries[rng.Next(Summaries.Length)]));
                 });
 
-            _ = context.SaveChanges();
+            _ = db.SaveChanges();
         }
     }
 }

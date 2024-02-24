@@ -10,15 +10,15 @@ namespace DotnetAngularWebProject.Common {
     public sealed class DbInitializer<TDbContext> : IDisposable
         where TDbContext : DbContext {
         private readonly IServiceScope scope;
-        private readonly TDbContext context;
+        private readonly TDbContext db;
 
         public DbInitializer(IApplicationBuilder app) {
             scope = app.ApplicationServices.CreateScope();
-            context = scope.ServiceProvider.GetRequiredService<TDbContext>();
+            db = scope.ServiceProvider.GetRequiredService<TDbContext>();
         }
 
         public DbInitializer<TDbContext> Migrate() {
-            context
+            db
                 .Database
                 .Migrate();
 
@@ -33,7 +33,7 @@ namespace DotnetAngularWebProject.Common {
                         && !x.IsAbstract
                         && x.GetInterfaces().Contains(typeof(IEntitySeeder<TDbContext>)))
                 .Select(x => (IEntitySeeder<TDbContext>)Activator.CreateInstance(x)!)
-                .ForEach(x => x.Seed(context));
+                .ForEach(x => x.Seed(db));
 
             return this;
         }
