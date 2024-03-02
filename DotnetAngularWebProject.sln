@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34408.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetAngularWebProject.API", "DotnetAngularWebProject.API\DotnetAngularWebProject.API.csproj", "{F67F9955-223C-43E5-8214-525AEDE6F067}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetAngularWebProject.Host", "DotnetAngularWebProject.Host\DotnetAngularWebProject.Host.csproj", "{F67F9955-223C-43E5-8214-525AEDE6F067}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetAngularWebProject.WeatherForecast", "DotnetAngularWebProject.WeatherForecast\DotnetAngularWebProject.WeatherForecast.csproj", "{B5A53D11-5838-4AA4-AC13-83AC392279D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetAngularWebProject.Modules.WeatherForecast", "DotnetAngularWebProject.Modules.WeatherForecast\DotnetAngularWebProject.Modules.WeatherForecast.csproj", "{B5A53D11-5838-4AA4-AC13-83AC392279D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetAngularWebProject.Common", "DotnetAngularWebProject.Common\DotnetAngularWebProject.Common.csproj", "{12855FD3-750F-4F55-9430-489849574669}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetAngularWebProject.Common", "DotnetAngularWebProject.Common\DotnetAngularWebProject.Common.csproj", "{12855FD3-750F-4F55-9430-489849574669}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -9,11 +9,11 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace DotnetAngularWebProject.API.Modules {
+namespace DotnetAngularWebProject.Host.Modules {
     public static class Extensions {
         public static IServiceCollection AddModules(this IServiceCollection @this) {
             IEnumerable<AppModule> modules = Directory
-                .EnumerateFiles(IStartup.AssemblyPath, $"{Program.Name}.*.dll")
+                .EnumerateFiles(IStartup.AssemblyPath, $"{Program.Name}.Modules.*.dll")
                 .Select(x => Assembly.LoadFrom(x))
                 .SelectMany(x => x.GetTypes())
                 .Where(x

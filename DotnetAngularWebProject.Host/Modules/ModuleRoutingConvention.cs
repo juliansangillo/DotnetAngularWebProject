@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace DotnetAngularWebProject.API.Modules {
+namespace DotnetAngularWebProject.Host.Modules {
     public sealed class ModuleRoutingConvention : IActionModelConvention {
         private readonly IEnumerable<AppModule> modules;
 

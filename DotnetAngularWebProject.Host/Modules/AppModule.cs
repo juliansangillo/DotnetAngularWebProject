@@ -1,7 +1,7 @@
 ﻿using DotnetAngularWebProject.Common;
 using System.Reflection;
 
-namespace DotnetAngularWebProject.API.Modules {
+namespace DotnetAngularWebProject.Host.Modules {
     public class AppModule {
         public AppModule(IStartup startup) => Startup = startup;
 

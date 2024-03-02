@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace DotnetAngularWebProject.WeatherForecast.Data.Migrations {
+namespace DotnetAngularWebProject.Modules.WeatherForecast.Data.Migrations {
     public partial class InitialCreate : Migration {
         protected override void Up(MigrationBuilder migrationBuilder) {
             migrationBuilder.CreateTable(

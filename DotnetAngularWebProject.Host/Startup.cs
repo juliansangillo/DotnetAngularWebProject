@@ -1,11 +1,11 @@
-using DotnetAngularWebProject.API.Modules;
+using DotnetAngularWebProject.Host.Modules;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 
-namespace DotnetAngularWebProject.API {
+namespace DotnetAngularWebProject.Host {
     public class Startup {
         public void ConfigureServices(IServiceCollection services) {
             _ = services.AddModules();

@@ -1,11 +1,11 @@
 ﻿using DotnetAngularWebProject.Common;
-using DotnetAngularWebProject.WeatherForecast.Data;
+using DotnetAngularWebProject.Modules.WeatherForecast.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
 
-namespace DotnetAngularWebProject.WeatherForecast {
+namespace DotnetAngularWebProject.Modules.WeatherForecast {
     internal sealed class Startup : IStartup {
         public static readonly string Module = typeof(Startup).Namespace!.Split('.').Last();
 

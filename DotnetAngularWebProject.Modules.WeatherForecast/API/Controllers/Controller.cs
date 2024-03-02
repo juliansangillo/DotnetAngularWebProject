@@ -1,10 +1,10 @@
-﻿using DotnetAngularWebProject.WeatherForecast.Data;
+﻿using DotnetAngularWebProject.Modules.WeatherForecast.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DotnetAngularWebProject.WeatherForecast.API.Controllers {
+namespace DotnetAngularWebProject.Modules.WeatherForecast.API.Controllers {
     [ApiController]
     [Route("[module]/api/[controller]")]
     public class Controller : ControllerBase {
