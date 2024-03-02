@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DotnetAngularWebProject.WeatherForecast.Data.Seeders {
-    internal sealed class ModelSeeder : IEntitySeeder<ModuleDbContext> {
+namespace DotnetAngularWebProject.WeatherForecast.Data.Entities.Model {
+    internal sealed class Seeder : IEntitySeeder<ModuleDbContext> {
         private static readonly string[] Summaries = new[] {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };
