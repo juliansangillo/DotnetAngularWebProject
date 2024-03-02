@@ -1,5 +1,5 @@
 {
   "ConnectionStrings": {
-    "WeatherForecast": "Data Source={FilePath}/DotnetAngularWebProject.WeatherForecast.db"
+    "WeatherForecast": "Data Source={FilePath}/DotnetAngularWebProject.Modules.WeatherForecast.db"
   }
 }
