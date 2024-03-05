@@ -19,7 +19,7 @@ namespace DotnetAngularWebProject.Modules.WeatherForecast.Data.Entities.Model {
                         _ = db.WeatherForecasts.Add(
                             new Domain.Model(
                                 id: index,
-                                date: DateTime.Now.AddDays(index),
+                                date: DateTime.UtcNow.AddDays(index),
                                 temperatureC: rng.Next(-20, 55),
                                 summary: Summaries[rng.Next(Summaries.Length)]));
                 });
