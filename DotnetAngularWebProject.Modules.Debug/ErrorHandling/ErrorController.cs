@@ -10,10 +10,10 @@ namespace DotnetAngularWebProject.Modules.Debug.ErrorHandling {
     public class ErrorController : BaseController {
         [HttpGet]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Type = typeof(ErrorResponse))]
-        public void UnknownApiError()
+        public void ApiError()
             => ThrowException(
-                inner => new UnknownApiException(HttpStatusCode.InternalServerError, "Something is wrong", inner),
-                () => ThrowException(() => new UnknownApiException(HttpStatusCode.InternalServerError, "Something else is wrong")));
+                inner => new ApiException(HttpStatusCode.InternalServerError, "Something is wrong", inner),
+                () => ThrowException(() => new ApiException(HttpStatusCode.InternalServerError, "Something else is wrong")));
 
         [HttpGet]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Type = typeof(ErrorResponse))]
