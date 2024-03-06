@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DotnetAngularWebProject.Common\DotnetAngularWebProject.Common.csproj" />
+    <ProjectReference Include="..\DotnetAngularWebProject.Modules.Debug\DotnetAngularWebProject.Modules.Debug.csproj" />
     <ProjectReference Include="..\DotnetAngularWebProject.Modules.WeatherForecast\DotnetAngularWebProject.Modules.WeatherForecast.csproj" />
   </ItemGroup>
 

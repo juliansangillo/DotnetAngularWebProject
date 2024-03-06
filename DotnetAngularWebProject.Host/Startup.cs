@@ -1,3 +1,4 @@
+using DotnetAngularWebProject.Host.Middleware;
 using DotnetAngularWebProject.Host.Modules;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -18,12 +19,12 @@ namespace DotnetAngularWebProject.Host {
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
             if (env.IsDevelopment()) {
                 _ = app
-                    .UseDeveloperExceptionPage()
                     .UseSwagger()
                     .UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", $"{Program.Name} v1"));
             }
 
             _ = app
+                .UseJsonExceptionPage()
                 .UseModules(env)
                 .UseHttpsRedirection()
                 .UseRouting()

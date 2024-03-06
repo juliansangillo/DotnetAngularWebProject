@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetAngularWebProject.Mod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetAngularWebProject.Common", "DotnetAngularWebProject.Common\DotnetAngularWebProject.Common.csproj", "{12855FD3-750F-4F55-9430-489849574669}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetAngularWebProject.Modules.Debug", "DotnetAngularWebProject.Modules.Debug\DotnetAngularWebProject.Modules.Debug.csproj", "{5E07F123-6C3A-49EE-A9F7-C25C2A8F8244}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{12855FD3-750F-4F55-9430-489849574669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12855FD3-750F-4F55-9430-489849574669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12855FD3-750F-4F55-9430-489849574669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E07F123-6C3A-49EE-A9F7-C25C2A8F8244}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E07F123-6C3A-49EE-A9F7-C25C2A8F8244}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E07F123-6C3A-49EE-A9F7-C25C2A8F8244}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E07F123-6C3A-49EE-A9F7-C25C2A8F8244}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

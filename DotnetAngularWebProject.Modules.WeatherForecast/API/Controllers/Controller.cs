@@ -1,13 +1,13 @@
-﻿using DotnetAngularWebProject.Modules.WeatherForecast.Data;
+﻿using DotnetAngularWebProject.Common;
+using DotnetAngularWebProject.Modules.WeatherForecast.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace DotnetAngularWebProject.Modules.WeatherForecast.API.Controllers {
-    [ApiController]
     [Route("[module]/api/[controller]")]
-    public class Controller : ControllerBase {
+    public class Controller : BaseController {
         private readonly ModuleDbContext db;
 
         public Controller(ModuleDbContext db) => this.db = db;
