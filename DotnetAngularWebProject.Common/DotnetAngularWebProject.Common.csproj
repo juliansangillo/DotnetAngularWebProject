@@ -7,7 +7,7 @@
 
   <PropertyGroup>
     <Version>0.1.0</Version>
-    <Copyright>(c) START_YEAR-END_YEAR_OR_PRESENT YOUR_NAME_OR_COMPANY</Copyright>
+    <Copyright>(c) START_YEAR-EXPIRY_YEAR OWNER</Copyright>
   </PropertyGroup>
 	
   <ItemGroup>
