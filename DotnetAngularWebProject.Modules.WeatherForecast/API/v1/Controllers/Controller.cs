@@ -5,8 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DotnetAngularWebProject.Modules.WeatherForecast.API.Controllers {
-    [Route("[module]/api/[controller]")]
+namespace DotnetAngularWebProject.Modules.WeatherForecast.API.v1.Controllers {
+    [ApiVersion("1")]
+    [Route("[module]/api/v{version:apiVersion}/[controller]")]
     public class Controller : BaseController {
         private readonly ModuleDbContext db;
 

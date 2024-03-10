@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotnetAngularWebProject.Modules.Debug.ErrorHandling {
+namespace DotnetAngularWebProject.Modules.Debug {
     public class UnknownException : Exception {
         public UnknownException(string? message) : base(message) {
         }

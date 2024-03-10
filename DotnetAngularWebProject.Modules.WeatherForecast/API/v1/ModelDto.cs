@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotnetAngularWebProject.Modules.WeatherForecast.API {
+namespace DotnetAngularWebProject.Modules.WeatherForecast.API.v1 {
     public sealed class ModelDto {
         public DateTime Date { get; init; }
 

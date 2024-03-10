@@ -4,20 +4,21 @@ using Swashbuckle.AspNetCore.Annotations;
 using System;
 using System.Net;
 
-namespace DotnetAngularWebProject.Modules.Debug.ErrorHandling {
-    [Route("[module]/api/[controller]/[action]")]
+namespace DotnetAngularWebProject.Modules.Debug.API.v1.Controllers {
+    [ApiVersion("1")]
+    [Route("[module]/api/v{version:apiVersion}/[controller]/[action]")]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "Controller methods can't be static.")]
     public class ErrorController : BaseController {
-        [HttpGet]
+        [HttpPost]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Type = typeof(ErrorResponse))]
-        public void ApiError()
+        public void Api()
             => ThrowException(
                 inner => new ApiException(HttpStatusCode.InternalServerError, "Something is wrong", inner),
                 () => ThrowException(() => new ApiException(HttpStatusCode.InternalServerError, "Something else is wrong")));
 
-        [HttpGet]
+        [HttpPost]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Type = typeof(ErrorResponse))]
-        public void UnknownError()
+        public void Unknown()
             => ThrowException(
                 inner => new UnknownException("Something is wrong", inner),
                 () => ThrowException(() => new UnknownException("Something else is wrong")));
