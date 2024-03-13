@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotnetAngularWebProject.Common {
+namespace DotnetAngularWebProject.Common.API {
     public sealed class ExceptionDto {
         public string? Type { get; init; }
         public string? Message { get; init; }

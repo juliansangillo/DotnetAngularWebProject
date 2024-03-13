@@ -1,5 +1,7 @@
 ﻿using DotnetAngularWebProject.Common;
-using DotnetAngularWebProject.Modules.WeatherForecast.Data;
+using DotnetAngularWebProject.Common.Data.EntityFramework;
+using DotnetAngularWebProject.Modules.WeatherForecast.Data.EntityFramework;
+using DotnetAngularWebProject.Modules.WeatherForecast.Data.Seeders;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -11,11 +13,20 @@ namespace DotnetAngularWebProject.Modules.WeatherForecast {
 
         public string ModuleName => Module;
 
-        public void ConfigureServices(IServiceCollection services) => services.AddDbContext<ModuleDbContext>();
+        public void ConfigureServices(IServiceCollection services)
+            => services
+                .AddEfCoreUnitOfWork<ModuleDbContext>()
+                .AddEfCoreRepository<Domain.IModel, Domain.Model, ModuleDbContext>();
 
         public void Configure(IApplicationBuilder app, Microsoft.AspNetCore.Hosting.IWebHostEnvironment env) {
+            IServiceScope scope = app.ApplicationServices.CreateScope();
+
             if (env.IsDevelopment())
-                _ = app.MigrateAndSeedDatabase<ModuleDbContext>(GetType().Assembly);
+                _ = scope
+                    .MigrateEfCore<ModuleDbContext>()
+                    .Seed<ModelSeeder>();
+
+            scope.Dispose();
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿namespace DotnetAngularWebProject.Common {
-    public abstract class Entity {
+    public abstract class Entity : IEntity {
         public Entity(int id) => Id = id;
 
         public int Id { get; }

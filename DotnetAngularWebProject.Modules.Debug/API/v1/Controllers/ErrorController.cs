@@ -1,4 +1,4 @@
-﻿using DotnetAngularWebProject.Common;
+﻿using DotnetAngularWebProject.Common.API;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using System;
@@ -8,7 +8,7 @@ namespace DotnetAngularWebProject.Modules.Debug.API.v1.Controllers {
     [ApiVersion("1")]
     [Route("[module]/api/v{version:apiVersion}/[controller]/[action]")]
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Performance", "CA1822:Mark members as static", Justification = "Controller methods can't be static.")]
-    public class ErrorController : BaseController {
+    public sealed class ErrorController : BaseController {
         [HttpPost]
         [SwaggerResponse((int)HttpStatusCode.InternalServerError, Type = typeof(ErrorResponse))]
         public void Api()

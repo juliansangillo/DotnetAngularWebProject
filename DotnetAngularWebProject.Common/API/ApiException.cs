@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Net;
 
-namespace DotnetAngularWebProject.Common {
+namespace DotnetAngularWebProject.Common.API {
     public class ApiException : Exception {
         public ApiException(HttpStatusCode errorCode, string? message) : base(message) => ErrorCode = errorCode;
 

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace DotnetAngularWebProject.Modules.WeatherForecast.Data.Migrations
+namespace DotnetAngularWebProject.Modules.WeatherForecast.Data.EntityFramework.Migrations
 {
     public partial class InitialCreate : Migration
     {

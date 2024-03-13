@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Threading.Tasks;
 
 namespace System.Collections.Generic {
     public static class EnumerableExtensions {
@@ -9,7 +10,7 @@ namespace System.Collections.Generic {
             return @this;
         }
 
-        public static bool None<T>(this IEnumerable<T> @this, Func<T, bool> predicate)
-            => !@this.Any(predicate);
+        public static async ValueTask<bool> NoneAsync<T>(this IAsyncEnumerable<T> @this, Func<T, bool> predicate)
+            => !await @this.AnyAsync(predicate);
     }
 }

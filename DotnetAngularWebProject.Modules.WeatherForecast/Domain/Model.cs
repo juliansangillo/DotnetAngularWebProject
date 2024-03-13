@@ -2,7 +2,7 @@ using DotnetAngularWebProject.Common;
 using System;
 
 namespace DotnetAngularWebProject.Modules.WeatherForecast.Domain {
-    internal sealed class Model : Entity {
+    internal sealed class Model : Entity, IModel {
         public Model(int id, DateTime date, int temperatureC, string summary) : base(id) {
             Date = date;
             TemperatureC = temperatureC;
